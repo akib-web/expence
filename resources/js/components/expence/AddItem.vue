@@ -10,7 +10,7 @@
                         <input  type="text" v-model="item.name" >
                     </div>
                     <button @click="showName()">clicked me</button>
-                    <ListItem v-for="post in posts" :post_id="post.id" :post_title="post.title" />
+                    <ListItem v-for="post in posts" v-bind:key="post.id" :post_id="post.id" :post_title="post.title" />
                 </div>
             </div>
         </div>

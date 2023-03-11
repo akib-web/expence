@@ -13,8 +13,18 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    @php
+                        $c = json_encode([[
+                            'id'=>1,
+                            'name'=>'Akib',
+                            ],[
+                            'id'=>2,
+                            'name'=>'javed',
+                            ]
+                        ]);
+                    @endphp
                     {{-- <expence-add title="Akib" data_id="100">hello testing</expence-add> --}}
-                    <Expence></Expence>
+                    <Expence :data="{{ $c }}"></Expence>
                     {{ __('You are logged in !') }}
                 </div>
             </div>
